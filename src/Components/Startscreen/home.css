@@ -1,0 +1,32 @@
+#header-Background {
+    background-color: #0000;
+    background: url(../../Images/background-Image.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-Container {
+    background-color: var(--color-gray);
+    padding: var(--spacer-3);
+    border-radius: 0.5rem;
+    display: inline-flex;
+    max-width: 500px;
+    margin: var(--spacer-2);
+}
+
+#header-Text h1 {
+    font-size: 2rem;
+    color: var(--color-orange);
+    margin-bottom: var(--spacer-3);
+    animation: color-change 1500ms ease-out;
+}
+
+#header-Text p {
+    font-size: clamp(14px, 2vw, 16px);
+}

@@ -1,0 +1,36 @@
+#navbar-Container {
+    background-color: var(--color-gray);
+    height: clamp(50px, 10vw, 80px);
+}
+
+#navbar-Logo {
+    height: clamp(35px, 5vw, 50px);
+    width: auto;
+}
+
+#navbar-Link-List {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#navbar-Link-List a {
+    margin: 0 clamp(1rem, 10vw, 8rem);
+    font-size: clamp(14px, 2vw, 16px);
+    padding: 0.25rem 0;
+    transition: all 200ms ease-out;
+    border-bottom: 2px solid transparent;
+}
+
+#navbar-Link-List a:hover {
+    color: var(--color-orange);
+    border-bottom: 2px solid white;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 600px) {
+    #navbar-Link-List {
+        justify-content: space-around;
+    }
+}
