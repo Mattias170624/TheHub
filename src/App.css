@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 html {
-  background-color: #000000;
+  background-color: rgb(29, 29, 31);
   font-size: 16px;
 }
 
@@ -26,7 +26,8 @@ html {
   --spacer-1: 0.5rem;
   --spacer-2: 1rem;
   --spacer-3: 1.5rem;
-  --spacer-4: 3rem;
+  --spacer-4: 2.5rem;
+  --spacer-5: 3rem;
 }
 
 /* Animation classes */
@@ -58,7 +59,9 @@ html {
 }
 
 @keyframes fade-in-down {
-  0%, 25% {
+
+  0%,
+  25% {
     opacity: 0;
   }
 
@@ -68,7 +71,9 @@ html {
 }
 
 @keyframes color-change {
-  0%, 70% {
+
+  0%,
+  70% {
     color: white;
   }
 
