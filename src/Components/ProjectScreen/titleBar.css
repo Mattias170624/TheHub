@@ -12,15 +12,15 @@
     justify-content: space-between;
     height: 100%;
     width: var(--wrapper-width);
-    padding: var(--spacer-4) 0;
+    padding-top: var(--spacer-4);
     margin: 0 var(--spacer-2);
-    border-bottom: 3px solid var(--color-orange);
 }
 
 #titleBar-Wrapper h1 {
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     font-weight: bold;
     color: white;
+    line-height: 1;
 }
 
 #search-Container {

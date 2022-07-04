@@ -38,6 +38,9 @@ const ProjectCard = () => {
                     <div className='project-Card'>
                         123
                     </div>
+                    <div className='project-Card'>
+                        123
+                    </div>
                 </div>
             </section>
         </div>
