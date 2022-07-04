@@ -3,6 +3,7 @@ import TitleBar from './Components/ProjectScreen/TitleBar';
 import Navbar from './Components/Navigation/Navbar/Navbar';
 import Home from './Components/Startscreen/Home';
 import './App.css';
+import ProjectCard from './Components/ProjectScreen/ProjectCard';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <>
             <Home />
             <TitleBar />
+            <ProjectCard />
           </>
         } />
       </Routes>
