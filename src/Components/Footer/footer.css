@@ -1,0 +1,33 @@
+#footer-Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin-top: 5rem;
+}
+
+#footer-Container {
+    width: var(--wrapper-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: clamp(80px, 5vw, 100px);
+}
+
+#footer-Container p {
+    color: black;
+    font-size: clamp(13px, 3vw, 18px);
+    font-weight: bold;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-Container p:first-child {
+    border-right: 2px solid var(--color-orange);
+}
+
+#footer-Container svg {
+    margin-left: var(--spacer-1);
+}
