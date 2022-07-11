@@ -26,19 +26,41 @@
     gap: clamp(var(--spacer-1), 2vw, var(--spacer-4));
 }
 
-.project-Card {
+.project-Card > * {
     width: 100%;
     height: clamp(250px, 50vw, 600px);
-    background-color: white;
+    background-color: rgb(255, 255, 255, 1);
     color: red;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    text-decoration: none;
+    transition: all 150ms ease-in;
+    box-shadow: rgba(14, 30, 37, 0.4) 0px 2px 4px 0px, rgba(14, 30, 37, 0.7) 0px 2px 16px 0px;
+}
+
+.project-Card > *:hover {
+    background-color: rgb(255, 255, 255, 0.85);
+    transform: translateY(-4px);
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 8px;
+}
+
+.project-Card p {
+    color: var(--color-orange);
+    font-weight: bold;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    text-align: center;
 }
 
 @media screen and (max-width: 1000px) {
     #project-Card-Container {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .project-Card>*:hover {
+        transform: none;
     }
 }
