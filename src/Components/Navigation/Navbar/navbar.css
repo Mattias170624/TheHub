@@ -1,6 +1,9 @@
 #navbar-Container {
     background-color: var(--color-gray);
-    height: clamp(50px, 10vw, 80px);
+    height: clamp(55px, 5vw, 80px);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
 }
 
 #navbar-Logo {
@@ -29,8 +32,69 @@
     font-weight: 500;
 }
 
-@media screen and (max-width: 600px) {
-    #navbar-Link-List {
-        justify-content: space-around;
+#navbar-Dropdown {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    background-color: var(--color-gray);
+    animation: fade-in 150ms ease-in;
+}
+
+#navbar-Dropdown a {
+    color: white;
+    width: 100%;
+    padding: 0.8rem var(--spacer-1);
+    border-bottom: 2px solid white;
+    display: flex;
+    font-size: 14px;
+}
+
+#navbar-Dropdown a:last-child {
+    border-bottom: 2px solid var(--color-orange);
+}
+
+#navbar-Dropdown a:first-child {
+    border-top: 2px solid var(--color-orange);
+}
+
+#navbar-Dropdown svg {
+    margin: auto var(--spacer-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hamburger-react {
+    position: absolute !important;
+    display: none;
+    right: 6px;
+    top: 3px;
+}
+
+@media screen and (max-width: 500px) {
+    #navbar-Link-List a {
+        display: none;
+    }
+
+    #navbar-Dropdown {
+        display: none;
+    }
+
+    .hamburger-react {
+        display: flex;
+    }
+}
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
