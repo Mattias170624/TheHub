@@ -10,6 +10,7 @@ const Navbar = () => {
     const [iconState, setIconState] = useState(false);
 
     useEffect(() => {
+        // Close dropdown on events outside the container
         document.addEventListener("mouseup", function (event) {
             var navbar = document.getElementById("navbar-Dropdown");
             var navbarDropdown = document.getElementById("navbar-Container");
@@ -29,7 +30,7 @@ const Navbar = () => {
         <div id='navbar-Container'>
             <section id='navbar-Link-List'>
                 <NavLink to='/' onClick={() => closeDropdown()}>HOME</NavLink>
-                <img src={logo2} alt='Logo of webpage' id='navbar-Logo' className='slide-in-left' />
+                <img src={logo2} alt='Logo of webpage' id='navbar-Logo' />
                 <NavLink to='/contact' onClick={() => closeDropdown()}>CONTACT</NavLink>
                 <Hamburger size={25} color='#4276d6' rounded
                     toggled={iconState} onToggle={() => handleIconState()} />

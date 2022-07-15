@@ -14,12 +14,6 @@ const ProjectCard = () => {
     return (
         <div id='project-Page-Wrapper'>
             <section id='project-Page-Container'>
-                {projectWindow &&
-                    <section id="project-Window">
-                        <p>Render me!</p>
-                    </section>
-                }
-
                 <div id='project-Card-Container'>
                     {projects.map((data, index) => (
                         <div className='project-Card' key={index}>
