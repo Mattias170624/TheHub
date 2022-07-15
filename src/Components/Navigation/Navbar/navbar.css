@@ -4,10 +4,13 @@
     position: fixed;
     width: 100%;
     z-index: 2;
+    outline: 2px solid white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.4) 0px 6px 6px;
 }
 
 #navbar-Logo {
     height: clamp(35px, 5vw, 50px);
+    animation: fade-in 1000ms ease-in;
     width: auto;
 }
 
@@ -15,20 +18,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: clamp(1rem, 10vw, 8rem);
     height: 100%;
 }
 
 #navbar-Link-List a {
-    margin: 0 clamp(1rem, 10vw, 8rem);
     font-size: clamp(14px, 2vw, 16px);
     padding: 0.25rem 0;
-    transition: all 200ms ease-out;
+    transition: all 150ms ease-out;
     border-bottom: 2px solid transparent;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 #navbar-Link-List a:hover {
-    color: var(--color-orange);
-    border-bottom: 2px solid white;
+    color: var(--color-blue);
+    border-bottom: 5px solid white;
     font-weight: 500;
 }
 
@@ -40,6 +48,7 @@
     width: 100%;
     background-color: var(--color-gray);
     animation: fade-in 150ms ease-in;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.4) 0px 6px 6px;
 }
 
 #navbar-Dropdown a {

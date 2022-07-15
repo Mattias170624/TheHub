@@ -9,25 +9,18 @@
 #footer-Container {
     width: var(--wrapper-width);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: clamp(80px, 5vw, 100px);
+    justify-content: center;
+    height: clamp(60px, 5vw, 100px);
 }
 
 #footer-Container p {
     color: black;
-    font-size: clamp(13px, 3vw, 18px);
-    font-weight: bold;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#footer-Container p:first-child {
-    border-right: 2px solid var(--color-orange);
+    font-size: clamp(12px, 3vw, 16px);
 }
 
 #footer-Container svg {
-    margin-left: var(--spacer-1);
+    vertical-align: middle;
+    margin-left: 0.4rem;
 }
