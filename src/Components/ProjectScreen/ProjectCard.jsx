@@ -1,11 +1,12 @@
 import { collection, getDocs } from "firebase/firestore";
 import db from "../../Firebase/firebase.js";
 import { useEffect, useState } from "react";
+import { BiLinkExternal } from 'react-icons/bi';
 import './projectCard.css'
 
 const ProjectCard = () => {
     const [projects, setProjects] = useState([]);
-    const [projectWindow, setProjectWindow] = useState(false);
+    const [currentCard, setCurrentCard] = useState(null);
 
     useEffect(() => {
         fetchDocuments()
@@ -16,10 +17,16 @@ const ProjectCard = () => {
             <section id='project-Page-Container'>
                 <div id='project-Card-Container'>
                     {projects.map((data, index) => (
-                        <div className='project-Card' key={index}>
-                            <li>
+                        <div className='project-Card' key={index} onClick={() => handleCardClick(index)}>
+                            <section className="project-Card-Title">
                                 <p>{data.title}</p>
-                            </li>
+                            </section>
+
+                            <section className="project-Card-Info">
+                                <p>{data.title}</p>
+                                <p>{data.about}</p>
+                                <a href={data.githubUrl}>Github Repo <BiLinkExternal /></a>
+                            </section>
                         </div>
                     ))}
                 </div>
@@ -28,35 +35,49 @@ const ProjectCard = () => {
     );
 
     async function fetchDocuments() {
-        const querySnapshot = await getDocs(collection(db, "projects"));
-        let urlList = [];
+        const documentsSnapshot = await getDocs(collection(db, "projects"));
+        let cardObjectArray = [];
 
-        querySnapshot.forEach((docs) => {
-            urlList.push(docs.data().url)
-        });
-        return prepareProjectCards(urlList)
-    };
+        documentsSnapshot.forEach((doc) => {
+            const title = doc.data().title;
+            const githubUrl = doc.data().githubUrl;
+            const about = doc.data().about;
 
-    async function prepareProjectCards(urlList) {
-        let objectArray = [];
-
-        for (const url of urlList) {
-            try {
-                const fetchUrl = await fetch(url);
-                const response = await fetchUrl.text()
-                const projectTitle = response.replace(/\s+/, '\x01').split('\x01')[0]
-
-                const cardObject = {
-                    title: projectTitle,
-                    bodyText: response
-                }
-
-                objectArray.push(cardObject)
-            } catch (err) {
-                console.log(err);
+            // Create a card object
+            const cardObject = {
+                title: title,
+                about: about,
+                githubUrl: githubUrl
             }
+
+            cardObjectArray.push(cardObject)
+        });
+
+        setProjects(cardObjectArray)
+    }
+
+    function handleCardClick(index) {
+        const allCardsInfo = document.getElementsByClassName('project-Card-Info');
+        const allCardsTitle = document.getElementsByClassName('project-Card-Title');
+
+        // Handles open and closing cards
+        if (index == currentCard) {
+            allCardsInfo[currentCard].style.display = 'none'
+            allCardsTitle[currentCard].style.display = 'flex'
+            setCurrentCard(null);
+        } else {
+            for (const card of allCardsInfo) {
+                card.style.display = 'none'
+            }
+
+            for (const card of allCardsTitle) {
+                card.style.display = 'flex'
+            }
+
+            allCardsTitle[index].style.display = 'none'
+            allCardsInfo[index].style.display = 'flex'
+            setCurrentCard(index);
         }
-        setProjects(objectArray)
     }
 }
 

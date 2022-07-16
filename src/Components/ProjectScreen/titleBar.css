@@ -36,7 +36,7 @@
     width: 15rem;
     height: clamp(30px, 5vw, 40px);
     transition: all 100ms linear;
-    font-size: 13px;
+    font-size: 14px;
     padding-left: clamp(2rem, 5vw, 2.5rem);
 }
 

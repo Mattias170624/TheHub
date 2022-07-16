@@ -30,7 +30,7 @@
     width: 100%;
     height: clamp(250px, 50vw, 600px);
     background-color: rgb(255, 255, 255, 1);
-    color: red;
+    font-size: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,14 +46,67 @@
     box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 8px;
 }
 
-.project-Card p {
+.project-Card-Title {
+    display: flex;
+    font-size: clamp(14px, 4vw, 24px);
+}
+
+.project-Card-Title p {
     color: var(--color-orange);
     font-weight: bold;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.project-Card-Info {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-Card-Info p:first-child {
+    word-break: break-all;
+    height: 20%;
+    width: 100%;
+    box-shadow: rgba(14, 30, 37, 0.1) 0px 2px 4px 0px, rgba(14, 30, 37, 0.2) 0px 2px 16px 0px;
+    display: flex;
+    font-size: clamp(14px, 2vw, 28px);
     text-align: center;
+    justify-content: center;
+    color: var(--color-orange);
+    font-weight: bold;
+    align-items: center;
+    padding: 0 var(--spacer-1);
+    z-index: 2;
+}
+
+.project-Card-Info p:last-of-type {
+    color: black;
     max-width: 300px;
-    word-wrap: normal;
-    margin: var(--spacer-1);
+    padding: var(--spacer-3) var(--spacer-1);
+    word-break: normal;
+    font-size: clamp(12px, 2vw, 16px);
+    height: 80%;
+    margin-top: auto;
+    overflow-y: auto;
+}
+
+.project-Card-Info a {
+    color: var(--color-blue);
+    box-shadow: rgba(14, 30, 37, 0.2) 0px 2px 4px 0px, rgba(14, 30, 37, 0.3) 0px 2px 16px 0px;
+    z-index: 2;
+    font-size: clamp(12px, 2vw, 16px);
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-Card-Info svg {
+    fill: var(--color-blue);
+    width: 13px;
+    height: 13px;
+    margin-left: 0.25rem;
 }
 
 @media screen and (max-width: 1000px) {
