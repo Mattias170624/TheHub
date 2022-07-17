@@ -12,6 +12,21 @@ const ProjectCard = () => {
         fetchDocuments()
     }, []);
 
+
+    useEffect(() => {
+        var cards = document.getElementsByClassName("project-Card");
+        for (let i = 0; i < cards.length; ++i) {
+            console.log('ee');
+            fadeIn(cards[i], i * 200)
+        }
+        function fadeIn(card, delay) {
+            setTimeout(() => {
+                card.classList.add('fadein')
+            }, delay)
+        }
+    }, [projects])
+
+
     return (
         <div id='project-Page-Wrapper'>
             <section id='project-Page-Container'>
@@ -24,7 +39,7 @@ const ProjectCard = () => {
 
                             <section className="project-Card-Info">
                                 <p>{data.title}</p>
-                                <p>{data.about}</p>
+                                <p><span>About:</span><br />{data.about}</p>
                                 <a href={data.githubUrl}>Github Repo <BiLinkExternal /></a>
                             </section>
                         </div>
@@ -53,7 +68,7 @@ const ProjectCard = () => {
             cardObjectArray.push(cardObject)
         });
 
-        setProjects(cardObjectArray)
+        return setProjects(cardObjectArray)
     }
 
     function handleCardClick(index) {
@@ -65,17 +80,25 @@ const ProjectCard = () => {
             allCardsInfo[currentCard].style.display = 'none'
             allCardsTitle[currentCard].style.display = 'flex'
             setCurrentCard(null);
+
+            for (const card of allCardsTitle) {
+                card.style.opacity = '1'
+            }
+
         } else {
             for (const card of allCardsInfo) {
                 card.style.display = 'none'
+                card.style.opacity = '1'
             }
 
             for (const card of allCardsTitle) {
                 card.style.display = 'flex'
+                card.style.opacity = '0.8'
             }
 
             allCardsTitle[index].style.display = 'none'
             allCardsInfo[index].style.display = 'flex'
+            allCardsInfo[index].style.opacity = '1'
             setCurrentCard(index);
         }
     }
