@@ -2,11 +2,13 @@ import { collection, getDocs } from "firebase/firestore";
 import db from "../../Firebase/firebase.js";
 import { useEffect, useState } from "react";
 import { BiLinkExternal } from 'react-icons/bi';
+import { BiSearch } from "react-icons/bi";
 import './projectCard.css'
 
 const ProjectCard = () => {
     const [projects, setProjects] = useState([]);
     const [currentCard, setCurrentCard] = useState(null);
+    let indexSum = 0;
 
     useEffect(() => {
         fetchDocuments()
@@ -16,9 +18,9 @@ const ProjectCard = () => {
     useEffect(() => {
         var cards = document.getElementsByClassName("project-Card");
         for (let i = 0; i < cards.length; ++i) {
-            console.log('ee');
             fadeIn(cards[i], i * 200)
         }
+
         function fadeIn(card, delay) {
             setTimeout(() => {
                 card.classList.add('fadein')
@@ -26,10 +28,18 @@ const ProjectCard = () => {
         }
     }, [projects])
 
-
     return (
         <div id='project-Page-Wrapper'>
             <section id='project-Page-Container'>
+                <section id="project-Title-Container">
+                    <h1>PROJECTS</h1>
+
+                    <form id='project-Search-Container' onSubmit={handleSubmit}>
+                        <BiSearch id='search-Icon' />
+                        <input type='text' placeholder="Search.." autoComplete='off' onChange={() => handleSearch()} id='search-Field' />
+                    </form>
+                </section>
+
                 <div id='project-Card-Container'>
                     {projects.map((data, index) => (
                         <div className='project-Card' key={index} onClick={() => handleCardClick(index)}>
@@ -49,6 +59,55 @@ const ProjectCard = () => {
         </div>
     );
 
+    function handleSubmit(event) {
+        event.preventDefault();
+        document.getElementById('search-Field').blur();
+    }
+
+    function handleSearch() {
+        const text = document.getElementById('search-Field').value.toLowerCase();
+
+        for (const project of projects) {
+            const title = project.title.toLowerCase().replace(/ /g, '')
+
+            if (title.indexOf(text) > -1) {
+                const allCards = document.getElementsByClassName('project-Card');
+                const searchedCard = allCards[project.index];
+
+                if (text.length > 0) {
+                    for (const card of allCards) {
+                        card.style.opacity = '0'
+                        card.style.display = 'none'
+                    }
+
+                    searchedCard.style.opacity = '1'
+                    searchedCard.style.display = 'flex'
+                } else {
+                    // Case when textfield is empty
+
+                    const allCardTitles = document.getElementsByClassName('project-Card-Title');
+                    const allCardInfos = document.getElementsByClassName('project-Card-Info');
+
+                    for (const card of allCards) {
+                        card.style.opacity = '1'
+                        card.style.display = 'flex'
+                    }
+
+                    for (const card of allCardInfos) {
+                        card.style.display = 'none'
+                    }
+
+                    for (const card of allCardTitles) {
+                        card.style.display = 'flex'
+                        card.style.opacity = '1'
+                    }
+
+                    setCurrentCard(null)
+                }
+            }
+        }
+    }
+
     async function fetchDocuments() {
         const documentsSnapshot = await getDocs(collection(db, "projects"));
         let cardObjectArray = [];
@@ -57,12 +116,16 @@ const ProjectCard = () => {
             const title = doc.data().title;
             const githubUrl = doc.data().githubUrl;
             const about = doc.data().about;
+            const index = indexSum
+
+            indexSum = indexSum + 1
 
             // Create a card object
             const cardObject = {
                 title: title,
                 about: about,
-                githubUrl: githubUrl
+                githubUrl: githubUrl,
+                index: index
             }
 
             cardObjectArray.push(cardObject)
