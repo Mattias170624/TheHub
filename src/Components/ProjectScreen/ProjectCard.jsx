@@ -84,7 +84,6 @@ const ProjectCard = () => {
                     searchedCard.style.display = 'flex'
                 } else {
                     // Case when textfield is empty
-
                     const allCardTitles = document.getElementsByClassName('project-Card-Title');
                     const allCardInfos = document.getElementsByClassName('project-Card-Info');
 
