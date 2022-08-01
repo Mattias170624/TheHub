@@ -5,6 +5,7 @@ import Home from './Components/Startscreen/Home';
 import ProjectCard from './Components/ProjectScreen/ProjectCard';
 import Footer from './Components/Footer/Footer';
 import './App.css';
+import ContactPage from './Components/Contactscreen/ContactPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <>
             <Home />
             <ProjectCard />
+            <ContactPage />
           </>
         } />
       </Routes>
