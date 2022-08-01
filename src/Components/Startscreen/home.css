@@ -1,11 +1,17 @@
 #header-Background {
     background-color: #000000;
     background: url(../../Images/background-Image.jpg) no-repeat center center;
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
     min-height: 90vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,6 +69,11 @@
     height: 15px;
 }
 
+@media only screen and (max-device-width: 1366px) {
+    #header-Background {
+        background-attachment: scroll;
+    }
+}
 
 @keyframes button-slide-left {
     0% {
