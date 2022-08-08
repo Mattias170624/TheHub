@@ -69,6 +69,11 @@
     height: 15px;
 }
 
+#home {
+    position: absolute;
+    top: 0px;
+}
+
 @media only screen and (max-device-width: 1366px) {
     #header-Background {
         background-attachment: scroll;

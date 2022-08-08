@@ -29,16 +29,17 @@ const Navbar = () => {
     return (
         <div id='navbar-Container'>
             <section id='navbar-Link-List'>
-                <NavLink to='/' onClick={() => closeDropdown()}>HOME</NavLink>
+                <a href='#home' onClick={() => closeDropdown()}>HOME</a>
                 <img src={logo2} alt='Logo of webpage' id='navbar-Logo' />
-                <NavLink to='/contact' onClick={() => closeDropdown()}>CONTACT</NavLink>
+                <a href='#footer-Container' onClick={() => closeDropdown()}>CONTACT</a>
+
                 <Hamburger size={25} color='#4276d6' rounded
                     toggled={iconState} onToggle={() => handleIconState()} />
             </section>
 
             <div id='navbar-Dropdown'>
-                <NavLink to='/' onClick={() => closeDropdown()}><ImHome />HOME</NavLink>
-                <NavLink to='/contact' onClick={() => closeDropdown()} ><GrMail />CONTACT</NavLink>
+                <a href='#header-Background' onClick={() => closeDropdown()}>HOME</a>
+                <a href='#footer-Container' onClick={() => closeDropdown()}>CONTACT</a>
             </div>
         </div>
     );
