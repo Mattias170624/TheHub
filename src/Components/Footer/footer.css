@@ -23,3 +23,8 @@
     vertical-align: middle;
     margin-left: 0.4rem;
 }
+
+#contact {
+    position: absolute;
+    top: 0px;
+}

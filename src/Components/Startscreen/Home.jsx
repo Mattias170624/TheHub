@@ -5,6 +5,7 @@ const Home = () => {
 
     return (
         <section id='header-Background'>
+            <a id="home"></a>
             <div id='welcome-Container'>
                 <section id='header-Text'>
                     <h1>Hello You!</h1>
