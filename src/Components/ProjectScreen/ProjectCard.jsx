@@ -65,7 +65,13 @@ const ProjectCard = () => {
     }
 
     function handleSearch() {
-        const text = document.getElementById('search-Field').value.toLowerCase();
+        const textField = document.getElementById('search-Field');
+        const text = document.getElementById('search-Field').value.toLowerCase().replace(/ /g, '');
+        const validLetters = /^[A-Za-z]/;
+
+        if (/^\s/.test(textField.value) || (!validLetters.test(textField.value))) {
+            textField.value = '';
+        }
 
         for (const project of projects) {
             const title = project.title.toLowerCase().replace(/ /g, '')

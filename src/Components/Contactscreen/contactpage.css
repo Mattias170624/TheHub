@@ -124,6 +124,24 @@
     padding-inline: 8px;
 }
 
+.contact-Success-Light {
+    animation: successLight 1250ms ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes successLight {
+    0% {
+        background-color: var(--color-gray);
+    }
+
+    30% {
+        background-color: lightgreen;
+    }
+
+    100% {
+        background-color: var(--color-gray)
+    }
+}
 
 @media screen and (max-width: 500px) {
     #contact-Title {

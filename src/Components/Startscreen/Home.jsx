@@ -1,5 +1,3 @@
-import { BsChevronDown } from 'react-icons/bs';
-import { AiOutlineDoubleRight } from 'react-icons/ai';
 import './home.css';
 const Home = () => {
 
@@ -14,8 +12,6 @@ const Home = () => {
                         <br /><br />
                         You will find additional details when clicking on each project.
                     </p>
-
-                    <button id='socials-Button'>My socials <AiOutlineDoubleRight /></button>
                 </section>
             </div>
         </section>

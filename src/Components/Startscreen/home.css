@@ -39,36 +39,6 @@
     font-size: clamp(14px, 2vw, 16px);
 }
 
-#socials-Button {
-    color: white;
-    border: 0;
-    background-color: var(--color-blue);
-    padding: var(--spacer-1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    font-size: 14px;
-    border-radius: 2px;
-    margin-top: var(--spacer-1);
-    animation: button-slide-left 800ms ease-in;
-    opacity: 0;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px, rgba(0, 0, 0, 0.1) 0px 6px 6px;
-}
-
-#socials-Button:hover {
-    background-color: rgb(66, 118, 214, 0.8);
-}
-
-#socials-Button svg {
-    margin-left: var(--spacer-1);
-    fill: white;
-    width: 15px;
-    height: 15px;
-}
-
 #home {
     position: absolute;
     top: 0px;
@@ -77,26 +47,6 @@
 @media only screen and (max-device-width: 1366px) {
     #header-Background {
         background-attachment: scroll;
-    }
-}
-
-@keyframes button-slide-left {
-    0% {
-        transform: translateX(-50px) skewX(-10deg);
-        opacity: 0;
-    }
-
-    60% {
-        transform: translateX(5px) skewX(-10deg);
-    }
-
-    80% {
-        transform: translateX(-3px) skewX(-10deg);
-    }
-
-    100% {
-        transform: translateX(0px) skew(-10deg);
-        opacity: 1;
     }
 }
 
