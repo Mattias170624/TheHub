@@ -8,6 +8,7 @@ import './contactpage.css';
 const ContactPage = () => {
     return (
         <div id='contact-Container'>
+            <a id="contact" className='anchor'></a>
             <section id='contact-Wrapper'>
                 <form id='contact-Form-Inputs' onSubmit={handleSubmit}>
                     <h1>CONTACT</h1>

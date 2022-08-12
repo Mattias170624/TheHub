@@ -31,15 +31,15 @@ const Navbar = () => {
             <section id='navbar-Link-List'>
                 <a href='#home' onClick={() => closeDropdown()}>HOME</a>
                 <img src={logo2} alt='Logo of webpage' id='navbar-Logo' />
-                <a href='#footer-Container' onClick={() => closeDropdown()}>CONTACT</a>
+                <a href='#contact' onClick={() => closeDropdown()}>CONTACT</a>
 
                 <Hamburger size={25} color='#4276d6' rounded
                     toggled={iconState} onToggle={() => handleIconState()} />
             </section>
 
             <div id='navbar-Dropdown'>
-                <a href='#header-Background' onClick={() => closeDropdown()}>HOME</a>
-                <a href='#footer-Container' onClick={() => closeDropdown()}>CONTACT</a>
+                <a href='#home' onClick={() => closeDropdown()}>HOME</a>
+                <a href='#contact' onClick={() => closeDropdown()}>CONTACT</a>
             </div>
         </div>
     );
