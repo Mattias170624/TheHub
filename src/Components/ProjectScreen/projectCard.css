@@ -99,6 +99,7 @@
 .project-Card-Title p {
     color: var(--color-orange);
     font-weight: bold;
+    text-align: center;
 }
 
 .project-Card-Info {
