@@ -1,7 +1,7 @@
 
 import { BsGithub } from 'react-icons/bs';
 import { RiLinkedinFill } from 'react-icons/ri';
-import { collection, getDocs, addDoc, doc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import db from "../../Firebase/firebase.js";
 import './contactpage.css';
 

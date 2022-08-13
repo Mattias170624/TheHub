@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     padding: 0 var(--spacer-2);
-    background: url(../../Images/background-Image.jpg) no-repeat center center;
+    background: url(../../Images/background.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -55,7 +55,13 @@
     margin-right: var(--spacer-3);
     padding: var(--spacer-2);
     background-color: var(--color-gray);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 0.5rem;
+}
+
+#contact-Form-Inputs h1 {
+    width: 100%;
+    text-align: left;
 }
 
 #contact-Form-Inputs input {
@@ -95,6 +101,15 @@
     margin-top: var(--spacer-1);
     margin-bottom: var(--spacer-2);
     box-shadow: rgb(0 0 0 / 10%) 0px 10px 20px, rgb(0 0 0 / 10%) 0px 6px 6px;
+    transition: background-color 150ms ease-out, transform 100ms linear;
+}
+
+#contact-Button:hover {
+    background-color: rgb(66, 118, 214, 0.75);
+}
+
+#contact-Button:active {
+    transform: translateY(2px) skew(-15deg);
 }
 
 #contact-Socials-Container {
@@ -109,6 +124,7 @@
     border-radius: 0.5rem;
     padding: var(--spacer-1);
     gap: var(--spacer-3);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 #contact-Socials-Container svg {
@@ -145,6 +161,10 @@
 
 @media screen and (max-width: 500px) {
     #contact-Title {
+        text-align: center;
+    }
+
+    #contact-Form-Inputs h1 {
         text-align: center;
     }
 
