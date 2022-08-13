@@ -42,7 +42,6 @@ const ContactPage = () => {
             message: inputArray[2]
         });
 
-
         // reset fields and then shows a success element
         for (const input of userInputs) {
             input.value = ''

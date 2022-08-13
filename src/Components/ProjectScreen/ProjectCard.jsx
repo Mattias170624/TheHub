@@ -16,6 +16,7 @@ const ProjectCard = () => {
 
 
     useEffect(() => {
+        // Animate opacity on cards loading in
         var cards = document.getElementsByClassName("project-Card");
         for (let i = 0; i < cards.length; ++i) {
             fadeIn(cards[i], i * 200)
@@ -73,6 +74,7 @@ const ProjectCard = () => {
             textField.value = '';
         }
 
+        // Changes css styles for all the cards
         for (const project of projects) {
             const title = project.title.toLowerCase().replace(/ /g, '')
 
