@@ -1,8 +1,5 @@
-import { NavLink } from 'react-router-dom';
-import { ImHome } from 'react-icons/im';
-import { GrMail } from 'react-icons/gr';
 import Hamburger from 'hamburger-react';
-import logo2 from '../../../Images/logo2.png';
+import logo from '../../../Images/logo.png';
 import { useState, useEffect } from 'react';
 import './navbar.css';
 
@@ -30,7 +27,7 @@ const Navbar = () => {
         <div id='navbar-Container'>
             <section id='navbar-Link-List'>
                 <a href='#home' onClick={() => closeDropdown()}>HOME</a>
-                <img src={logo2} alt='Logo of webpage' id='navbar-Logo' />
+                <img src={logo} alt='Logo of webpage' id='navbar-Logo' />
                 <a href='#contact' onClick={() => closeDropdown()}>CONTACT</a>
 
                 <Hamburger size={25} color='#4276d6' rounded

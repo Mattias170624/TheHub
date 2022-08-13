@@ -1,12 +1,10 @@
 #header-Background {
     background-color: #000000;
     background: url(../../Images/background.jpg) no-repeat center center;
-
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
     min-height: 90vh;
     background-attachment: fixed;
     background-position: center;
