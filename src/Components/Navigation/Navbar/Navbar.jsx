@@ -1,65 +1,79 @@
-import Hamburger from 'hamburger-react';
-import logo from '../../../Images/logo.png';
-import { useState, useEffect } from 'react';
-import './navbar.css';
+import logo from "../../../Images/logo2.png";
+import Hamburger from "hamburger-react";
+import { useState, useEffect } from "react";
+import "./navbar.css";
 
 const Navbar = () => {
-    const [iconState, setIconState] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    useEffect(() => {
-        // Close dropdown on events outside the container
-        document.addEventListener("mouseup", function (event) {
-            var navbar = document.getElementById("navbar-Dropdown");
-            var navbarDropdown = document.getElementById("navbar-Container");
+  useEffect(() => {
+    // Close dropdown on events outside the container
+    document.addEventListener("mouseup", function (event) {
+      const dropdownContainer = document.getElementById("Navbar-Dropdown");
+      const navbarContainer = document.getElementById("Navbar-Container");
 
-            if (!navbar.contains(event.target) &&
-                !navbarDropdown.contains(event.target)) {
-                closeDropdown()
-            }
-        });
-    }, [])
+      if (
+        !dropdownContainer.contains(event.target) &&
+        !navbarContainer.contains(event.target)
+      ) {
+        closeDropdown();
+      }
+    });
+  }, []);
 
-    window.onscroll = () => {
-        onScrollCloseMenu()
+  window.onscroll = () => {
+    onScrollCloseMenu();
+  };
+
+  return (
+    <div id="Navbar-Container">
+      <div id="Navbar-Wrapper">
+        <img alt="Webpage logo" id="Navbar-Logo" src={logo} />
+
+        <section id="Navbar-Link-List">
+          <a href="#home">HOME</a>
+          <a href="#contact">COMPETENCE</a>
+          <a href="#contact">EXPERIENCE</a>
+          <a href="#home">PROJECTS</a>
+          <Hamburger
+            size={25}
+            color="#BC3848"
+            rounded
+            toggled={isOpen}
+            onToggle={() => handleHamburgerClick()}
+          />
+        </section>
+      </div>
+      <div id="Navbar-Dropdown" onClick={() => closeDropdown()}>
+        <a href="#home">HOME</a>
+        <a href="#contact">COMPETENCE</a>
+        <a href="#contact">EXPERIENCE</a>
+        <a href="#home">PROJECTS</a>
+      </div>
+    </div>
+  );
+
+  function handleHamburgerClick() {
+    const dropdownContainer = document.getElementById("Navbar-Dropdown");
+
+    setIsOpen(!isOpen);
+    dropdownContainer.style.opacity = isOpen ? 0 : 1;
+    dropdownContainer.style.visibility = isOpen ? "hidden" : "visible";
+  }
+
+  function closeDropdown() {
+    const dropdownContainer = document.getElementById("Navbar-Dropdown");
+
+    setIsOpen(false);
+    dropdownContainer.style.opacity = 0;
+    dropdownContainer.style.visibility = "hidden";
+  }
+
+  function onScrollCloseMenu() {
+    if (isOpen == true) {
+      closeDropdown();
     }
-
-    return (
-        <div id='navbar-Container'>
-            <section id='navbar-Link-List'>
-                <a href='#home' onClick={() => closeDropdown()}>HOME</a>
-                <img src={logo} alt='Logo of webpage' id='navbar-Logo' />
-                <a href='#contact' onClick={() => closeDropdown()}>CONTACT</a>
-
-                <Hamburger size={25} color='#4276d6' rounded
-                    toggled={iconState} onToggle={() => handleIconState()} />
-            </section>
-
-            <div id='navbar-Dropdown'>
-                <a href='#home' onClick={() => closeDropdown()}>HOME</a>
-                <a href='#contact' onClick={() => closeDropdown()}>CONTACT</a>
-            </div>
-        </div>
-    );
-
-    function handleIconState() {
-        const dropDownLinks = document.getElementById('navbar-Dropdown')
-
-        iconState ? setIconState(false) : setIconState(true)
-        dropDownLinks.style.display = iconState ? 'none' : 'flex'
-    }
-
-    function closeDropdown() {
-        const dropDownLinks = document.getElementById('navbar-Dropdown')
-        dropDownLinks.style.display = 'none'
-        setIconState(false)
-    }
-
-    function onScrollCloseMenu() {
-        const dropDownLinks = document.getElementById('navbar-Dropdown')
-        if (dropDownLinks.style.display == 'flex') {
-            closeDropdown()
-        }
-    }
-}
+  }
+};
 
 export default Navbar;

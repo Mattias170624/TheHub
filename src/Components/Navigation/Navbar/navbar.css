@@ -1,108 +1,87 @@
-#navbar-Container {
-    background-color: var(--color-gray);
-    height: clamp(55px, 5vw, 80px);
-    position: fixed;
-    width: 100%;
-    z-index: 2;
-    outline: 2px solid white;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.4) 0px 6px 6px;
+#Navbar-Container {
+  background-color: var(--color-primary);
+  height: clamp(55px, 5vw, 80px);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#navbar-Logo {
-    height: clamp(35px, 5vw, 50px);
-    animation: fade-in 1000ms ease-in;
-    width: auto;
+#Navbar-Wrapper {
+  margin: 0 2rem;
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#navbar-Link-List {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(1rem, 10vw, 8rem);
-    height: 100%;
+#Navbar-Logo {
+  height: clamp(40px, 5vw, 55px);
+  width: auto;
 }
 
-#navbar-Link-List a {
-    font-size: clamp(14px, 2vw, 16px);
-    padding: 0.25rem 0;
-    transition: all 150ms ease-out;
-    border-bottom: 2px solid transparent;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+#Navbar-Link-List {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 5vw, 5rem);
+  height: 100%;
 }
 
-#navbar-Link-List a:hover {
-    color: var(--color-blue);
-    border-bottom: 5px solid white;
-    font-weight: 500;
+#Navbar-Link-List a {
+  font-size: clamp(14px, 2vw, 16px);
+  padding: 0.5rem 0.5rem;
+  transition: all 150ms ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 4px;
+  border-bottom: 4px solid transparent;
 }
 
-#navbar-Dropdown {
-    display: none;
-    position: absolute;
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-    background-color: var(--color-gray);
-    animation: fade-in 150ms ease-in;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.4) 0px 6px 6px;
+#Navbar-Link-List a:hover {
+  border-bottom: 4px solid var(--color-accent);
+  transform: perspective(100px) scale(1.07);
 }
 
-#navbar-Dropdown a {
-    color: white;
-    width: 100%;
-    padding: 0.8rem var(--spacer-1);
-    border-bottom: 2px solid white;
-    display: flex;
-    font-size: 14px;
-}
-
-#navbar-Dropdown a:last-child {
-    border-bottom: 2px solid var(--color-orange);
-}
-
-#navbar-Dropdown a:first-child {
-    border-top: 2px solid var(--color-orange);
-}
-
-#navbar-Dropdown svg {
-    margin: auto var(--spacer-1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+#Navbar-Dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--color-primary);
+  padding: 1.25rem;
+  gap: 1.25rem;
+  top: clamp(55px, 5vw, 80px);
+  right: 0px;
+  border-radius: 0 0 0 0.5rem;
+  box-shadow: inset 0px 6px 6px -3px rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3) 0px 3px 5px;
+  transition: opacity 100ms ease-out;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .hamburger-react {
-    position: absolute !important;
-    display: none;
-    right: 6px;
-    top: 3px;
+  position: absolute !important;
+  display: none;
+  right: 6px;
+  top: 3px;
 }
 
 @media screen and (max-width: 500px) {
-    #navbar-Link-List a {
-        display: none;
-    }
+  #Navbar-Link-List a {
+    display: none;
+  }
 
-    #navbar-Dropdown {
-        display: none;
-    }
+  .hamburger-react {
+    display: flex;
+  }
 
-    .hamburger-react {
-        display: flex;
-    }
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+  #Navbar-Wrapper {
+    margin: 0 1rem;
+  }
 }
