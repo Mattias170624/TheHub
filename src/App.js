@@ -1,16 +1,14 @@
-import Navbar from './Components/Navigation/Navbar/Navbar';
-import Home from './Components/Startscreen/Home';
-import ProjectCard from './Components/ProjectScreen/ProjectCard';
-import Footer from './Components/Footer/Footer';
-import ContactPage from './Components/Contactscreen/ContactPage';
-import './App.css';
+import Navbar from "./Components/Navigation/Navbar/Navbar";
+import Home from "./Components/Startscreen/Home";
+import Footer from "./Components/Footer/Footer";
+import ContactPage from "./Components/Contactscreen/ContactPage";
+import "./App.css";
 
 function App() {
   return (
     <>
       <Navbar />
       <Home />
-      <ProjectCard />
       <ContactPage />
       <Footer />
     </>
