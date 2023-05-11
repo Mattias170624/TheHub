@@ -1,0 +1,7 @@
+#Experience-Container {
+  background-color: white;
+  width: 100%;
+  height: 500px;
+  z-index: -5;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 6px inset;
+}
