@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Cantarell');
+@import url("https://fonts.googleapis.com/css?family=Cantarell");
 
 html {
-  background-color: rgb(29, 29, 31);
+  background-color: white;
   font-size: 16px;
   scroll-behavior: smooth !important;
 }
