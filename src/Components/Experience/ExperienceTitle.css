@@ -1,32 +1,32 @@
-#Comp-Title-Container {
+#Exp-Title-Container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#Comp-Title-Wrapper {
+#Exp-Title-Wrapper {
   margin: 4rem 2rem 5rem 2rem;
   flex-direction: column;
   width: 1400px;
   display: flex;
-  justify-content: left;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
 }
 
-#Comp-Title-Container h3 {
+#Exp-Title-Container h3 {
   color: black;
   font-size: clamp(32px, 5vw, 48px);
 }
 
-#Comp-Title-Line {
+#Exp-Title-Line {
   border-top: 4px solid var(--color-accent);
   width: 55%;
   margin-top: 0.5rem;
 }
 
 @media screen and (max-width: 500px) {
-  #Comp-Title-Wrapper {
-    margin: 4arem 1rem 5rem 1rem;
+  #Exp-Title-Wrapper {
+    margin: 4rem 1rem 5rem 1rem;
   }
 }

@@ -1,7 +1,80 @@
-#Experience-Container {
-  background-color: white;
+#Exp-Container {
+  display: flex;
   width: 100%;
-  height: 500px;
-  z-index: -5;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 6px inset;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12rem;
+}
+
+#Exp-Wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+
+.Exp-Card-Container {
+  background-color: #f8f8f8;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 1rem;
+  max-width: 400px;
+  min-height: 500px;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.Exp-Card-Container h3 {
+  width: 100%;
+  font-size: clamp(24px, 5vw, 36px);
+  color: black;
+  margin: 1rem 0;
+}
+
+.Exp-Card-Container p {
+  color: black;
+}
+
+.Exp-Card-Container p:last-of-type {
+  margin: 1rem 0;
+}
+
+.Exp-Card-Container span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+.Exp-Card-Desc {
+  text-align: start;
+}
+
+.Exp-Card-Container:nth-last-child(1),
+.Exp-Card-Container:nth-last-child(2) {
+  background-color: var(--color-primary);
+}
+
+.Exp-Card-Container:nth-last-child(1) p,
+.Exp-Card-Container:nth-last-child(2) p {
+  color: white;
+}
+
+.Exp-Card-Container:nth-last-child(1) h3,
+.Exp-Card-Container:nth-last-child(2) h3 {
+  color: var(--color-accent);
+}
+
+.Exp-Card-Container:nth-last-child(1) span,
+.Exp-Card-Container:nth-last-child(2) span {
+  background-color: var(--color-accent);
+}
+
+@media screen and (max-width: 1200px) {
+  #Exp-Wrapper {
+    flex-direction: column;
+    gap: 4rem;
+  }
 }
