@@ -1,0 +1,33 @@
+#Projects-Title-Container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+}
+
+#Projects-Title-Wrapper {
+  margin: 4rem 2rem 5rem 2rem;
+  flex-direction: column;
+  width: 1400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Projects-Title-Container h3 {
+  color: white;
+  font-size: clamp(32px, 5vw, 48px);
+}
+
+#Projects-Title-Line {
+  border-top: 4px solid var(--color-accent);
+  width: 55%;
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  #Projects-Title-Wrapper {
+    margin: 4rem 1rem 5rem 1rem;
+  }
+}

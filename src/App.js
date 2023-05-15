@@ -5,6 +5,8 @@ import CompetenceTitle from "./Components/Competence/CompetenceTitle";
 import Competence from "./Components/Competence/Competence";
 import Experience from "./Components/Experience/Experience";
 import ExperienceTitle from "./Components/Experience/ExperienceTitle";
+import ProjectsTitle from "./Components/Projects/ProjectsTitle";
+import Projects from "./Components/Projects/Projects";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Competence />
       <ExperienceTitle />
       <Experience />
+      <ProjectsTitle />
+      <Projects />
     </>
   );
 }
