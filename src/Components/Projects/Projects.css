@@ -8,15 +8,15 @@
 }
 
 #Projects-Wrapper {
-  width: 1728px;
+  width: 1700px;
   display: flex;
-  margin: 0 2rem;
   flex-direction: column;
+  margin: 0 2rem;
 }
 
 .Project-Card-Container {
   background-color: white;
-  max-width: 550px;
+  max-width: 450px;
   width: 100%;
   border-radius: 5px;
   padding: 1rem;
@@ -69,8 +69,9 @@
 
 .Project-Cards-Row {
   display: flex;
-  gap: 2rem;
   flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
 }
 
 .Project-Card-Bottom {

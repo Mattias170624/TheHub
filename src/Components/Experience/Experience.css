@@ -10,6 +10,7 @@
   display: flex;
   align-items: baseline;
   justify-content: space-evenly;
+  margin: 0 1rem;
 }
 
 .Exp-Card-Container {
@@ -36,6 +37,7 @@
 
 .Exp-Card-Container p {
   color: black;
+  text-align: left;
 }
 
 .Exp-Card-Container p:last-of-type {
@@ -76,5 +78,6 @@
   #Exp-Wrapper {
     flex-direction: column;
     gap: 4rem;
+    margin: 0;
   }
 }
