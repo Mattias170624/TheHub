@@ -17,15 +17,17 @@ import "./Competence.css";
 const Competence = () => {
   return (
     <>
+      <a id="competence"></a>
       <section id="Comp-Container">
         <div className="Comp-Card">
           <img alt="Web development icon" src={icon1} />
           <section className="Comp-Card-Text">
             <h3>Web Development</h3>
             <p>
-              Easy to intermediate skills working with JS frameworks like React.
-              Have created a handful of static and dynamic websites together
-              with firebase or mongodb as the backend.
+              Easy to intermediate skills working with JS and a framework like
+              React. Have created a handful of static and dynamic websites
+              together with firebase as the backend to store data. Comfotable
+              using figma to sketch new designs.
             </p>
           </section>
           <div className="Comp-Code-Icons">
@@ -40,7 +42,7 @@ const Competence = () => {
           <section className="Comp-Card-Text">
             <h3>App Development </h3>
             <p>
-              Primary knowdlege with crossplatform development with dart with
+              Primary knowledge with crossplatform development with dart across
               multiple projects and 2 internships in flutter framework. Have
               decent knowledge in native programming from working on a handful
               of school projects.
@@ -58,8 +60,9 @@ const Competence = () => {
             <h3>Backend</h3>
             <p>
               Fundemental understaning with sql and nosql type databases.
-              Firebase used primarly with previous web stack. Have used both in
-              app development.
+              Comfortable with firebase and some of the extra provided services.
+              Used it in my internship at Cetasol. Have basic understanding
+              using mongodb databases.
             </p>
           </section>
           <div className="Comp-Code-Icons">

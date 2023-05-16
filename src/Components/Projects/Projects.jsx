@@ -10,7 +10,7 @@ import Dart from "./../../Images/Dart.png";
 import Firebase from "./../../Images/Firebase.png";
 import Mongodb from "./../../Images/Mongodb.png";
 import { useEffect, useState } from "react";
-import { getMobileProjects, getWebProjects } from "../../Api/projectsDataApi";
+import { getMobileProjects, getOtherProjects, getWebProjects } from "../../Api/projectsDataApi";
 
 const Projects = () => {
   const [mobileProjects, setMobileProjects] = useState([]);
@@ -24,6 +24,7 @@ const Projects = () => {
   async function callProjectApi() {
     setMobileProjects(await getMobileProjects());
     setWebProjects(await getWebProjects());
+    setOtherProjects(await getOtherProjects());
   }
 
   return (

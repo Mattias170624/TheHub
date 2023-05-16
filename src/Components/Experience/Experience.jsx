@@ -13,12 +13,13 @@ const Experience = () => {
             <span />
             <div className="Exp-Card-Desc">
               <p>
-                is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s <br />
+                IT specialisation in high school gave me basic understanding of
+                programming in general. This is where my passion for programming
+                really started to accelerate. <br />
                 <br />
-                when an unknown printer took a galley of type and scrambled it e
-                and scrambled it to
+                Learned some fundementals about programming, ux-design and the
+                general gist of computers that has carried on and helped me to
+                this day.
               </p>
             </div>
           </section>
@@ -31,12 +32,12 @@ const Experience = () => {
             <span />
             <div className="Exp-Card-Desc">
               <p>
-                is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-                <br /> <br /> It has survived not only five centuries, but also
-                the leap into electronic typesetting
+                Greatly expanded my knowledge in mobile development on many
+                levels and also broadening my understanding of programming as a
+                whole. is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
               </p>
             </div>
           </section>
@@ -51,7 +52,8 @@ const Experience = () => {
               <p>
                 is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s mmy text ever since the 1500s
+                since the 1500s mmy text ever since the 1500s stry's standard
+                dummy text ever since the.
               </p>
             </div>
           </section>
