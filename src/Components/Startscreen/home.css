@@ -13,7 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 6px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 6px;
 }
 
 #Header-Container {
@@ -120,12 +120,19 @@
 }
 
 @media screen and (max-width: 500px) {
+  #Header-Background {
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (max-width: 500px) {
   #Mobile-Header-Logo-Container {
     display: flex;
   }
 
   #Header-Social-Container {
-    margin-top: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   #Header-Logo {
@@ -134,7 +141,8 @@
 
   #Mobile-Header-Logo {
     display: flex;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
   }
 
   #Header-Text h3,

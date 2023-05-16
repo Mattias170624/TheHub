@@ -3,6 +3,7 @@ import "./CompetenceTitle.css";
 const CompetenceTitle = () => {
   return (
     <>
+      <a id="competence" className="anchor"></a>
       <section id="Comp-Title-Container">
         <div id="Comp-Title-Wrapper">
           <section>

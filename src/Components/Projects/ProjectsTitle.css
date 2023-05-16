@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   background-color: var(--color-primary);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px -6px 6px;
 }
 
 #Projects-Title-Wrapper {

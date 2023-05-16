@@ -4,7 +4,6 @@ import "./home.css";
 const Home = () => {
   return (
     <section id="Header-Background">
-      <a id="home"></a>
       <div id="Header-Container">
         <div id="Header-Wrapper">
           <section id="Mobile-Header-Logo-Container">

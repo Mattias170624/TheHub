@@ -31,10 +31,10 @@ const Navbar = () => {
         <img alt="Webpage logo" id="Navbar-Logo" src={logo} />
 
         <section id="Navbar-Link-List">
-          <a href="#home">HOME</a>
-          <a href="#contact">COMPETENCE</a>
-          <a href="#contact">EXPERIENCE</a>
-          <a href="#home">PROJECTS</a>
+          <a href="#">HOME</a>
+          <a href="#competence">COMPETENCE</a>
+          <a href="#experience">EXPERIENCE</a>
+          <a href="#projects">PROJECTS</a>
           <Hamburger
             size={25}
             color="#BC3848"
@@ -45,10 +45,10 @@ const Navbar = () => {
         </section>
       </div>
       <div id="Navbar-Dropdown" onClick={() => closeDropdown()}>
-        <a href="#home">HOME</a>
-        <a href="#contact">COMPETENCE</a>
-        <a href="#contact">EXPERIENCE</a>
-        <a href="#home">PROJECTS</a>
+        <a href="#">HOME</a>
+        <a href="#competence">COMPETENCE</a>
+        <a href="#experience">EXPERIENCE</a>
+        <a href="#projects">PROJECTS</a>
       </div>
     </div>
   );
