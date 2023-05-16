@@ -16,7 +16,8 @@
 
 .Project-Card-Container {
   background-color: white;
-  max-width: 500px;
+  max-width: 550px;
+  width: 100%;
   border-radius: 5px;
   padding: 1rem;
   display: flex;
@@ -37,7 +38,11 @@
 
 .Project-Title-Text {
   font-size: clamp(24px, 5vw, 28px);
-  margin: 2rem 0;
+  margin: 8rem 0 2rem 0;
+}
+
+.Project-Title-Text:first-child {
+  margin-top: 0rem;
 }
 
 .Project-Card-Container a {
@@ -72,12 +77,18 @@
   border-top: 3px solid var(--color-accent);
   margin-top: 1rem;
   padding-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.Project-Card-Bottom img {
+.Project-Card-Images {
   height: 60px;
   width: 60px;
-  margin: 0 0.25rem;
+  margin: 0 0.5rem;
+}
+
+.Project-Card-Images:first-child {
+  margin: 0 0.5rem 0 0;
 }
 
 @media screen and (max-width: 500px) {
