@@ -34,10 +34,9 @@ const Experience = () => {
               <p>
                 Greatly expanded my knowledge in mobile development on many
                 levels and also broadening my understanding of programming as a
-                whole. is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                whole. Learned some in depth code guidelines that i always
+                follow when creating new project in order to create sustainable,
+                well documenteted, and correctly structured code.
               </p>
             </div>
           </section>
@@ -50,10 +49,13 @@ const Experience = () => {
             <span />
             <div className="Exp-Card-Desc">
               <p>
-                is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s mmy text ever since the 1500s stry's standard
-                dummy text ever since the.
+                On my first internship for Cetasol i was asked to create an app
+                that helped the customer onboarding process of their technical
+                solution called iHelm. The apps purpose was to showcase how the
+                app can look and function as an onboarding proccess. <br />
+                <br />
+                At the end of the internship period i showed off the app to the
+                whole team and i went through the flutter code structure.
               </p>
             </div>
           </section>
@@ -66,13 +68,15 @@ const Experience = () => {
             <span />
             <div className="Exp-Card-Desc">
               <p>
-                is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s <br />
+                In my second internship at Labelcaster i was faced with a very
+                big codebase to get familiar with right of the bat. Their app
+                contains several solutions for music labels that helps them to
+                grow their buisness.
                 <br />
-                when an unknown printer took a galley of type and scrambled it e
-                and scrambled it towhen an unknown printer took a galley of type
-                and scrambled it e and scrambled
+                <br />
+                And straight from the start i was working besides the tech team,
+                contributing in all aspects of the work flow fixing bugs, adding
+                new features, retrospective planning, etc.
               </p>
             </div>
           </section>
