@@ -40,18 +40,16 @@ const Projects = () => {
 };
 
 function ProjectCard({ projectData }) {
-  if (projectData.length == 0) {
-    console.log("show loading image...");
-  } else {
+  if (projectData.length !== 0) {
     return (
       <div className="Project-Cards-Row">
-        {projectData.map((data) => (
-          <section className="Project-Card-Container">
+        {projectData.map((data, index) => (
+          <section className="Project-Card-Container" key={index}>
             <div className="Project-Card-Top">
               <h3>{data.title}</h3>
               <p>{data.desc}</p>
-              <a href={data.link} target="_blank">
-                <img className="Project-Card-Link-Icon" src={icon} />
+              <a href={data.link} target="_blank" rel="noreferrer">
+                <img className="Project-Card-Link-Icon" src={icon} alt="icon" />
               </a>
             </div>
             <div className="Project-Card-Bottom">
@@ -78,8 +76,8 @@ function ProjectImages({ imageArray }) {
   if (imageArray.includes("firebase")) imageSrcArray.push(Firebase);
   if (imageArray.includes("mongodb")) imageSrcArray.push(Mongodb);
 
-  return imageSrcArray.map((src) => (
-    <img src={src} className="Project-Card-Images" />
+  return imageSrcArray.map((src, index) => (
+    <img src={src} className="Project-Card-Images" alt="icon" key={index}/>
   ));
 }
 

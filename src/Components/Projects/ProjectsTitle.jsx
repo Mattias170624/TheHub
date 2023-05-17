@@ -3,7 +3,7 @@ import "./ProjectsTitle.css";
 const ProjectsTitle = () => {
   return (
     <>
-      <a id="projects" className="anchor"></a>
+      <button id="projects" className="anchor"></button>
       <section id="Projects-Title-Container">
         <div id="Projects-Title-Wrapper">
           <section>

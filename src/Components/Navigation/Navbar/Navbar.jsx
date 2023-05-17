@@ -31,7 +31,7 @@ const Navbar = () => {
         <img alt="Webpage logo" id="Navbar-Logo" src={logo} />
 
         <section id="Navbar-Link-List">
-          <a href="#">HOME</a>
+          <a href="#top">HOME</a>
           <a href="#competence">COMPETENCE</a>
           <a href="#experience">EXPERIENCE</a>
           <a href="#projects">PROJECTS</a>
@@ -45,7 +45,7 @@ const Navbar = () => {
         </section>
       </div>
       <div id="Navbar-Dropdown" onClick={() => closeDropdown()}>
-        <a href="#">HOME</a>
+        <a href="#top">HOME</a>
         <a href="#competence">COMPETENCE</a>
         <a href="#experience">EXPERIENCE</a>
         <a href="#projects">PROJECTS</a>
@@ -70,7 +70,7 @@ const Navbar = () => {
   }
 
   function onScrollCloseMenu() {
-    if (isOpen == true) {
+    if (isOpen === true) {
       closeDropdown();
     }
   }

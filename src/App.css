@@ -33,5 +33,12 @@ html {
 
 .anchor {
   position: relative;
-  top: clamp(-50px, 2vw, -90px)
+  top: clamp(-50px, 2vw, -90px);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline;
+  margin: 0;
+  padding: 0;
 }

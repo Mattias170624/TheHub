@@ -19,23 +19,23 @@ const Home = () => {
             <section id="Header-Social-Container">
               <ul>
                 <li>
-                  <a href="https://www.linkedin.com/in/mattias-andersson-71bb481a0/" target="_blank">
-                    <img id="Social-Img-1" />
+                  <a href="https://www.linkedin.com/in/mattias-andersson-71bb481a0/" target="_blank" rel="noreferrer">
+                    <img id="Social-Img-1" alt="linkedin link"/>
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/Mattias170624" target="_blank">
-                    <img id="Social-Img-2" />
+                  <a href="https://github.com/Mattias170624" target="_blank" rel="noreferrer">
+                    <img id="Social-Img-2" alt="github link"/>
                   </a>
                 </li>
                 <li>
-                  <a href="https://discordapp.com/users/385882136533794819" target="_blank">
-                    <img id="Social-Img-3" />
+                  <a href="https://discordapp.com/users/385882136533794819" target="_blank" rel="noreferrer">
+                    <img id="Social-Img-3" alt="discord link"/>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.figma.com/@mattias170624" target="_blank">
-                    <img id="Social-Img-4" />
+                  <a href="https://www.figma.com/@mattias170624" target="_blank" rel="noreferrer">
+                    <img id="Social-Img-4" alt="figma link"/>
                   </a>
                 </li>
               </ul>
