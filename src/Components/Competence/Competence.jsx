@@ -17,7 +17,6 @@ import "./Competence.css";
 const Competence = () => {
   return (
     <>
-      <a id="competence"></a>
       <section id="Comp-Container">
         <div className="Comp-Card">
           <img alt="Web development icon" src={icon1} />

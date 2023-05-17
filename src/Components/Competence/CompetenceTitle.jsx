@@ -3,7 +3,7 @@ import "./CompetenceTitle.css";
 const CompetenceTitle = () => {
   return (
     <>
-      <a id="competence" className="anchor"></a>
+      <button id="competence" className="anchor"></button>
       <section id="Comp-Title-Container">
         <div id="Comp-Title-Wrapper">
           <section>

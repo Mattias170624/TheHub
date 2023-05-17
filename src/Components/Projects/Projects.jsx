@@ -10,12 +10,11 @@ import Dart from "./../../Images/Dart.png";
 import Firebase from "./../../Images/Firebase.png";
 import Mongodb from "./../../Images/Mongodb.png";
 import { useEffect, useState } from "react";
-import { getMobileProjects, getOtherProjects, getWebProjects } from "../../Api/projectsDataApi";
+import { getMobileProjects, getWebProjects } from "../../Api/projectsDataApi";
 
 const Projects = () => {
   const [mobileProjects, setMobileProjects] = useState([]);
   const [webProjects, setWebProjects] = useState([]);
-  const [otherProjects, setOtherProjects] = useState([]);
 
   useEffect(() => {
     callProjectApi();
@@ -24,7 +23,6 @@ const Projects = () => {
   async function callProjectApi() {
     setMobileProjects(await getMobileProjects());
     setWebProjects(await getWebProjects());
-    setOtherProjects(await getOtherProjects());
   }
 
   return (
@@ -35,8 +33,6 @@ const Projects = () => {
           <ProjectCard projectData={mobileProjects} />
           <h2 className="Project-Title-Text">Web platform</h2>
           <ProjectCard projectData={webProjects} />
-          <h2 className="Project-Title-Text">Other platform</h2>
-          <ProjectCard projectData={otherProjects} />
         </div>
       </section>
     </>
@@ -44,18 +40,16 @@ const Projects = () => {
 };
 
 function ProjectCard({ projectData }) {
-  if (projectData.length == 0) {
-    console.log("show loading image...");
-  } else {
+  if (projectData.length !== 0) {
     return (
       <div className="Project-Cards-Row">
-        {projectData.map((data) => (
-          <section className="Project-Card-Container">
+        {projectData.map((data, index) => (
+          <section className="Project-Card-Container" key={index}>
             <div className="Project-Card-Top">
               <h3>{data.title}</h3>
               <p>{data.desc}</p>
-              <a href={data.link} target="_blank">
-                <img className="Project-Card-Link-Icon" src={icon} />
+              <a href={data.link} target="_blank" rel="noreferrer">
+                <img className="Project-Card-Link-Icon" src={icon} alt="icon" />
               </a>
             </div>
             <div className="Project-Card-Bottom">
@@ -82,8 +76,8 @@ function ProjectImages({ imageArray }) {
   if (imageArray.includes("firebase")) imageSrcArray.push(Firebase);
   if (imageArray.includes("mongodb")) imageSrcArray.push(Mongodb);
 
-  return imageSrcArray.map((src) => (
-    <img src={src} className="Project-Card-Images" />
+  return imageSrcArray.map((src, index) => (
+    <img src={src} className="Project-Card-Images" alt="icon" key={index}/>
   ));
 }
 

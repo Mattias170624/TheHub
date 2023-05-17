@@ -7,6 +7,7 @@ import Experience from "./Components/Experience/Experience";
 import ExperienceTitle from "./Components/Experience/ExperienceTitle";
 import ProjectsTitle from "./Components/Projects/ProjectsTitle";
 import Projects from "./Components/Projects/Projects";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Experience />
       <ProjectsTitle />
       <Projects />
+      <Footer />
     </>
   );
 }
