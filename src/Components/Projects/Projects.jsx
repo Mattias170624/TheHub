@@ -11,6 +11,8 @@ import Firebase from "./../../Images/Firebase.png";
 import Mongodb from "./../../Images/Mongodb.png";
 import { useEffect, useState } from "react";
 import { getMobileProjects, getWebProjects } from "../../Api/projectsDataApi";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
 
 const Projects = () => {
   const [mobileProjects, setMobileProjects] = useState([]);
@@ -29,10 +31,14 @@ const Projects = () => {
     <>
       <section id="Projects-Container">
         <div id="Projects-Wrapper">
-          <h2 className="Project-Title-Text">Mobile platform</h2>
-          <ProjectCard projectData={mobileProjects} />
-          <h2 className="Project-Title-Text">Web platform</h2>
-          <ProjectCard projectData={webProjects} />
+          <h3 className="Project-Title-Text">Mobile Platform</h3>
+          <section className="Project-Grid-Container">
+            <ProjectCard projectData={mobileProjects} />
+          </section>
+          <h3 className="Project-Title-Text">Web Platform</h3>
+          <section className="Project-Grid-Container">
+            <ProjectCard projectData={webProjects} />
+          </section>
         </div>
       </section>
     </>
@@ -42,22 +48,28 @@ const Projects = () => {
 function ProjectCard({ projectData }) {
   if (projectData.length !== 0) {
     return (
-      <div className="Project-Cards-Row">
+      <>
         {projectData.map((data, index) => (
-          <section className="Project-Card-Container" key={index}>
-            <div className="Project-Card-Top">
-              <h3>{data.title}</h3>
-              <p>{data.desc}</p>
-              <a href={data.link} target="_blank" rel="noreferrer">
-                <img className="Project-Card-Link-Icon" src={icon} alt="icon" />
-              </a>
-            </div>
-            <div className="Project-Card-Bottom">
-              <ProjectImages imageArray={data.icons} />
-            </div>
-          </section>
+          <ScrollAnimation animateIn="animate__fadeInUp" duration={0.75} animateOnce={true}>
+            <section className="Project-Card-Container" key={index}>
+              <div className="Project-Card-Top">
+                <h3>{data.title}</h3>
+                <p>{data.desc}</p>
+                <a href={data.link} target="_blank" rel="noreferrer">
+                  <img
+                    className="Project-Card-Link-Icon"
+                    src={icon}
+                    alt="icon"
+                  />
+                </a>
+              </div>
+              <div className="Project-Card-Bottom">
+                <ProjectImages imageArray={data.icons} />
+              </div>
+            </section>
+          </ScrollAnimation>
         ))}
-      </div>
+      </>
     );
   }
 }
@@ -77,7 +89,7 @@ function ProjectImages({ imageArray }) {
   if (imageArray.includes("mongodb")) imageSrcArray.push(Mongodb);
 
   return imageSrcArray.map((src, index) => (
-    <img src={src} className="Project-Card-Images" alt="icon" key={index}/>
+    <img src={src} className="Project-Card-Images" alt="icon" key={index} />
   ));
 }
 
