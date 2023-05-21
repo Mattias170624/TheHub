@@ -19,7 +19,7 @@ const Home = () => {
             <section id="Header-Social-Container">
               <ul>
                 <li>
-                  <a href="https://www.linkedin.com/in/mattias-andersson-71bb481a0/" target="_blank" rel="noreferrer">
+                  <a href="https://www.linkedin.com/in/mattias--andersson/" target="_blank" rel="noreferrer">
                     <img id="Social-Img-1" alt="linkedin link"/>
                   </a>
                 </li>
